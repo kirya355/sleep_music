@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class MyBottom extends StatelessWidget {
-  final Function(int) onTapped;
-  int selectedIndex;
+  final Function(int) onTapped; //TODO: delete this line, take void from Provider
+  int selectedIndex; //TODO: delete this line, take index from Provider
 
   MyBottom({
     Key? key,
-    required this.onTapped,
-    required this.selectedIndex,
+    required this.onTapped, //TODO: delete this line, take void from Provider
+    required this.selectedIndex, //TODO: delete this line, take index from Provider
   }) : super(key: key);
 
   @override

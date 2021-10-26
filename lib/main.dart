@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyHomePage extends StatefulWidget { //TODO: Try to use only StatelessWidget
   const MyHomePage({Key? key}) : super(key: key);
 
   @override
@@ -96,9 +96,9 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ], // TODO refresh
       ),
-      body: StreamBuilder <List<MyTileData>?>(
+      body: StreamBuilder <List<MyTileData>?>( //TODO: Change to Consumer, and create new Provider with List<MyTileData>?
         stream:_streamListMyTile, // данные, которые будут отображены в будущем
-        builder: (context, snapshot) {  // передаём AsyncWidgetBuilder; можно вызывать несколько раз  
+        builder: (context, snapshot) {  // передаём AsyncWidgetBuilder; можно вызывать несколько раз
           if (snapshot.hasData) {   // если данные получены
             return SingleChildScrollView(
               // возможность прокрутки дочернего виджета
